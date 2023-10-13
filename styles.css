@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#container {
+    position: relative;
+    background-color: rgb(244, 244, 244);
+    padding: 2rem 6rem;
+}
+
+#left-arrow, #right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: lightgray;
+    color: rgb(65, 65, 65);
+    height: 3rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+#left-arrow {
+    left: 0;
+}
+
+#right-arrow {
+    right: 0;
+}
+
+.left-arrow-svg, .right-arrow-svg {
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+#carousel{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(30, 200px);
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+    
+}
+
+.carousel-item {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    margin: 0.1rem;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item-img {
+    max-height: 4rem;
+    max-width: 90%;
+    align-self: center;
+    margin:1rem;
+}
+
+.carousel-item-props {
+    margin-top: auto;
+}
+.carousel-item-title {
+    margin:0.1rem 1rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+.carousel-item-price {
+    margin:0.5rem 1rem
+}
